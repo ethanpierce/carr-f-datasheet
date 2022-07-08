@@ -258,13 +258,10 @@ switches are used to reserve exclusive access to the GPIO pins.
    the Notecard GPS antenna connector to power the low-noise amplifier (LNA) of an
    active GPS antenna. This switch must be `PASSIVE` if Notecard is used with a passive
    GPS antenna! However, we recommend an active antenna for best performance.
-
-2. `DFU` - When turned `ON`, enables serial communication with Notecard
-   via Notecard `AUX_RX` and `AUX_TX` via Raspberry Pi GPIOs 14 and 15 (Pins 8 and
-   10). Typical applications will use I2C for Notecard interactions, with this AUX
-   serial port providing useful debugging features for developers.
-
-3. `Feather PWR` -  When in the `ON`position connects the EN pin of the 3.6V regulator to NVIO to keep power all the time. When in the `SWITCHED` position connects the EN pin of the 3.6V regulator to the ATTN pin on the notecard for low power scenarios.
+2. `DFU` - When turned `ON`, enables Outboard DFU with Swan
+   via Notecard `AUX_RX` and `AUX_TX` via Swans Boot, Reset, TX, RX pins. This completely isolates the Boot, Reset, and TX,RX pins from the external headers so its important to note based on the peripherals you use in your design.
+   
+3. Feather PWR` -  When in the `ON`position connects the EN pin of the 3.6V regulator to NVIO to keep power all the time. When in the `SWITCHED` position connects the EN pin of the 3.6V regulator to the ATTN pin on the notecard for low power scenarios.
 
 </If> {/* 'notecarrier-pi' */}
 
